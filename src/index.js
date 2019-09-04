@@ -5,7 +5,7 @@ import React, { Fragment , useState , useEffect } from 'react';
 const ReactMovement = ( props ) => {
 
     const className = props.class;
-    const toPush = props.push || 3;
+    const toPush = Integer.valueOf( props.push ) || 3;
 
     var oldx = 0,
         oldy = 0,
