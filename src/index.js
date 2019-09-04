@@ -6,6 +6,8 @@ const ReactMovement = ( props ) => {
 
     const className = props.class;
 
+    // test
+
     var oldx = 0,
         oldy = 0,
         coordinates = [ ];
