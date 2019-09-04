@@ -10,12 +10,12 @@ importing the module into your react application :
 
 ```javascript
 import ReactMovement from @codedevbrad/react_movement
-
+```
 
 the component takes an optional props
-    `[string]`  class - the class name of your element
+    `[ type : String]`  class - the class name of your element
 
-    
+
 Example :
 
 ```javascript
@@ -23,3 +23,4 @@ Example :
                }>
     <component> or <html> that you want to move.
 </ReactMovement>
+```
