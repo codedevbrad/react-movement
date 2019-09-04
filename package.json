@@ -1,6 +1,6 @@
 {
   "name": "@codedevbrad/react_movement",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "a simple react wrapper component that moves an element based on the cursor position ",
   "main": "index.js",
   "scripts": {
