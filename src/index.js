@@ -5,7 +5,6 @@ import React, { Fragment , useState , useEffect } from 'react';
 const ReactMovement = ( props ) => {
 
     const className = props.class;
-    const toPush = parseInt( props.push ) || 5;
 
     var oldx = 0,
         oldy = 0,
@@ -13,8 +12,8 @@ const ReactMovement = ( props ) => {
 
         const translateImage = ( e ) => {
 
-           e.pageX < oldx ? coordinates[0] = toPush : coordinates[0] = -toPush;
-           e.pageY < oldy ? coordinates[1] = toPush : coordinates[1] = -toPush;
+           e.pageX < oldx ? coordinates[0] = 3 : coordinates[0] = -3;
+           e.pageY < oldy ? coordinates[1] = 3 : coordinates[1] = -3;
 
            oldx = e.pageX;
            oldy = e.pageY;
