@@ -1,5 +1,3 @@
-
-
 ## what is is?
 react_movement is a simple react wrapper component that pushes its child component in the opposite
 direction of the cursor when hovered over.
@@ -20,7 +18,9 @@ import ReactMovement from @codedevbrad/react_movement
 ```
 
 The component takes an optional props.
-    `[ type : String ]` class: the className of your element
+
+   `[ type : String ]`
+   class: the className of your element
 
 
 ### Example :
