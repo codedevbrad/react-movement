@@ -21,7 +21,8 @@ import ReactMovement from @codedevbrad/react_movement
 
 The component takes an optional props.
 
-    `[ type : String ]` class: the className of your element
+   `[ type : String ]`
+   class: the className of your element
 
 
 ### Example :
