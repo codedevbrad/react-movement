@@ -19,7 +19,7 @@ or view the Github repo at https://github.com/codedevbrad/svg_morph_glitch_effec
 import ReactMovement from @codedevbrad/react_movement
 ```
 
-The component takes an optional props : 
+The component takes an optional props.
     `[ type : String ]` class: the className of your element
 
 
