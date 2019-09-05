@@ -4,8 +4,7 @@ direction of the cursor when hovered over.
 
 View the demo at https://codedevbrad.github.io/svg_morph_glitch_effects/
 
-or view the Github repo at https://github.com/codedevbrad/svg_morph_glitch_effects
-
+or view the Github repo at https://github.com/codedevbrad/react-movement
 
 ### to install the module :
 ` npm i @codedevbrad/react_movement`
