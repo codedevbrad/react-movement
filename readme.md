@@ -1,4 +1,4 @@
-## what is is?
+## what is it?
 react_movement is a simple react wrapper component that pushes its child component in the opposite
 direction of the cursor when hovered over.
 
