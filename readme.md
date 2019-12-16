@@ -8,7 +8,7 @@ or view the Github repo at https://github.com/codedevbrad/react-movement
 
 
 ### to install the module :
-` npm i @codedevbrad/react_movement`
+` npm i '@codedevbrad/react_movement'`
 
 
 ### importing the module into your react application :
@@ -26,7 +26,16 @@ The component takes an optional props.
 ### Example :
 
 ```javascript
-<ReactMovement class={ "element" }}>
+<ReactMovement class={ "smooth_scroll" }}>
     <component> or <html> that you want to move.
 </ReactMovement>
 ```
+important :
+
+To achieve a smooth animation, you must add the property transition: all 300ms to the element you wish to move.
+I recomment adding the class :
+
+  ```.smooth_scroll {
+    transition: all 600ms;
+  }
+  ```
