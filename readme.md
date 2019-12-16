@@ -27,15 +27,20 @@ The component takes an optional props.
 
 ```javascript
 <ReactMovement class={ "smooth_scroll" }}>
-    <component> or <html> that you want to move.
+  <img src=url /> or <Component />
 </ReactMovement>
 ```
 important :
 
-To achieve a smooth animation, you must add the property transition: all 300ms to the element you wish to move.
+the ReactMovement component wraps a single div around the passed props and attaches a mouseMove eventhandler to the wrapper.
+The eventhandler should fire when only hovering over the wrapper but in cases , it may fires for its children elements.
+I recommend that children passed as props to the ReactMovement component be a singular element. If you do require more than one element be passed as props, add the class property 'pointer events : none' or transition all 600ms to any needed child.
+
+To achieve a smooth animation, you must add the property transition: all 600ms to the element you wish to move.
 I recomment adding the class :
 
-  ```.smooth_scroll {
+  ```
+  .smooth_scroll {
     transition: all 600ms;
   }
   ```
