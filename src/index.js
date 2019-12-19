@@ -1,32 +1,32 @@
 
+import React from 'react';
 
-import React, { Fragment , useState , useEffect } from 'react';
+const ReactMovement = ( { children , elClass , distance  , wrapper } ) => {
 
-const ReactMovement = ( props ) => {
-
-    const className = props.class;
+    if ( !distance ) distance = 3;
+    const Tag = wrapper || 'div';
 
     var oldx = 0,
         oldy = 0,
         coordinates = [ ];
 
-        const translateImage = ( e ) => {
+    const translateImage = ( e ) => {
 
-           e.pageX < oldx ? coordinates[0] = 3 : coordinates[0] = -3;
-           e.pageY < oldy ? coordinates[1] = 3 : coordinates[1] = -3;
+       e.pageX < oldx ? coordinates[0] = distance : coordinates[0] = -distance;
+       e.pageY < oldy ? coordinates[1] = distance : coordinates[1] = -distance;
 
-           oldx = e.pageX;
-           oldy = e.pageY;
+       oldx = e.pageX;
+       oldy = e.pageY;
 
-           const xTranslate = coordinates[0] + 'px';
-           const yTranslate = coordinates[1] + 'px';
-           e.currentTarget.style.transform = "translate(" + xTranslate + "," + yTranslate + ")";
-        }
+       const xTranslate = coordinates[0] + 'px';
+       const yTranslate = coordinates[1] + 'px';
+       e.currentTarget.style.transform = "translate(" + xTranslate + "," + yTranslate + ")";
+    }
 
     return (
-       <div className={ className } onMouseMove={ e => translateImage( e ) }>
-          { props.children }
-       </div>
+       <Tag className={ elClass } onMouseMove={ e => translateImage( e ) }>
+          { children }
+       </Tag>
     )
 }
 
