@@ -1,14 +1,17 @@
+import React, { Fragment , useState , useEffect , useRef } from 'react';
 
-import React from 'react';
-
-const ReactMovement = ( { children , elClass , distance  , wrapper } ) => {
+const ReactMovement = ( { children , elClass , distance  , tag } ) => {
 
     if ( !distance ) distance = 3;
-    const Tag = wrapper || 'div';
+    const Tag = tag || 'div';
 
     var oldx = 0,
         oldy = 0,
         coordinates = [ ];
+
+    const setBack = ( e ) => {
+        e.currentTarget.style.transform = "none";
+    }
 
     const translateImage = ( e ) => {
 
@@ -24,7 +27,7 @@ const ReactMovement = ( { children , elClass , distance  , wrapper } ) => {
     }
 
     return (
-       <Tag className={ elClass } onMouseMove={ e => translateImage( e ) }>
+       <Tag className={ elClass } onMouseMove={ e => translateImage( e )} onMouseLeave={ e => setBack( e ) }>
           { children }
        </Tag>
     )
