@@ -8,13 +8,13 @@ or view the Github repo at https://github.com/codedevbrad/react-movement
 
 
 ### to install the module :
-` npm i '@codedevbrad/react_movement'`
+`npm install --save '@codedevbrad/react_movement'`
 
 
 ### importing the module into your react application :
 
 ```javascript
-import ReactMovement from @codedevbrad/react_movement
+import ReactMovement from '@codedevbrad/react_movement'
 ```
 
 The component takes an optional props.

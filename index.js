@@ -5,32 +5,37 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var ReactMovement = function ReactMovement(props) {
-  var className = props["class"];
+var ReactMovement = function ReactMovement(_ref) {
+  var children = _ref.children,
+      elClass = _ref.elClass,
+      distance = _ref.distance,
+      wrapper = _ref.wrapper;
+  if (!distance) distance = 3;
+  var Tag = wrapper || 'div';
   var oldx = 0,
       oldy = 0,
       coordinates = [];
 
   var translateImage = function translateImage(e) {
-    e.pageX < oldx ? coordinates[0] = 3 : coordinates[0] = -3;
-    e.pageY < oldy ? coordinates[1] = 3 : coordinates[1] = -3;
+    e.pageX < oldx ? coordinates[0] = distance : coordinates[0] = -distance;
+    e.pageY < oldy ? coordinates[1] = distance : coordinates[1] = -distance;
     oldx = e.pageX;
     oldy = e.pageY;
     var xTranslate = coordinates[0] + 'px';
     var yTranslate = coordinates[1] + 'px';
-    e.target.style.transform = "translate(" + xTranslate + "," + yTranslate + ")";
+    e.currentTarget.style.transform = "translate(" + xTranslate + "," + yTranslate + ")";
   };
 
-  return _react["default"].createElement("div", {
-    className: className,
+  return /*#__PURE__*/_react["default"].createElement(Tag, {
+    className: elClass,
     onMouseMove: function onMouseMove(e) {
       return translateImage(e);
     }
-  }, props.children);
+  }, children);
 };
 
 var _default = ReactMovement;
